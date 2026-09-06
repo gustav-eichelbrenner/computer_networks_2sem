@@ -5,5 +5,3 @@ cd /d "%~dp0"
 git add .
 git commit -m "Экзаменационные вопросы: обновлено"
 git push origin main --force
-
-pause
