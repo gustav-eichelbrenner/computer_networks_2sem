@@ -96,5 +96,9 @@ cp /opt/unetlab/addons/qemu/linux-Debian-13-SRV/virtioa.qcow2 /opt/unetlab/addon
 
 Далее выполняем коммит в каталоге временного диска ноды:
 ```bash
-cd /opt/unetlab/tmp/3/92 && /opt/qemu/bin/qemu-img commit virtioa.qcow2
+mkdir -p /opt/unetlab/addons/qemu/linux-kali-custom
+
+/opt/qemu/bin/qemu-img convert -p -O qcow2 \
+  /opt/unetlab/tmp/3/92/virtioa.qcow2 \
+  /opt/unetlab/addons/qemu/linux-kali-custom/virtioa.qcow2
 ```
